@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,11 @@
 </head>
 
 <style>
-
-    body{
+    body {
         background-color: black;
     }
 
-.img {
+    .img {
         position: absolute;
         top: 0;
         left: 0;
@@ -25,9 +25,22 @@
         cursor: pointer;
     }
 </style>
+
 <body>
 
     <div id="img" class="img"></div>
-    
+
+    <script>
+        var img = document.getElementById('img');
+
+
+        iframe.addEventListener('click', function () {
+
+            parent.postMessage("This is a message", "*");
+        });
+
+    </script>
+
 </body>
+
 </html>
