@@ -33,10 +33,10 @@
     <script>
         var img = document.getElementById('img');
 
-
+// Obican klik event na <div id="img"> koji govori parentu da ce uspostaviti safe komunikaciju sa njim
         img.addEventListener('click', function () {
 
-            parent.postMessage("This is a message", "*");
+            parent.postMessage("Hello parent!", "*");
         });
 
     </script>
