@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        // document.getElementById("clickthrough-button").addEventListener("click", clickthrough);
+
+        // function clickthrough() {
+
+
+
+        //     console.log(":::::     CLICKTAG     :::::");
+        //     window.open(clickTag);
+
+        // }
+
+    </script>
 </head>
 
 <style>
@@ -28,9 +41,9 @@
 
 <body>
 
-    <div id="img" class="img"></div>
+    <div id="clickthrough-button" class="img"></div>
 
-    <script>
+    <!-- <script>
         var img = document.getElementById('img');
 
 // Obican klik event na <div id="img"> koji govori parentu da ce uspostaviti safe komunikaciju sa njim
@@ -39,6 +52,29 @@
             parent.postMessage("Hello parent!", "*");
         });
 
+    </script> -->
+
+    <script>
+
+        document.getElementById("clickthrough-button").addEventListener("click", clickthrough);
+
+        function clickthrough() {
+
+            console.log(":::::     CLICKTAG     :::::");
+            window.open(clickTag);
+
+        }
+    </script>
+
+    <script type="text/javascript">
+        getQueryString = function (key, default_) {
+            if (default_ == null) { default_ = ""; }
+            key = key.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\?&]" + key + "=([^&#]*)");
+            var qs = regex.exec(window.location.href);
+            if (qs == null) return default_; else return qs[1];
+        };
+        var clickTag = decodeURIComponent(getQueryString('clicktag'));
     </script>
 
 </body>
